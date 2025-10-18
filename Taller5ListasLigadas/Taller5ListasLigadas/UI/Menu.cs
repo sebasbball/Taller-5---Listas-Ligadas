@@ -6,12 +6,12 @@ namespace Taller5ListasLigadas.UI
     // Menu class - handles all the user interface
     public class Menu
     {
-        private DoublyLinkedList<int> myList;
+        private DoublyLinkedList<string> myList;
 
         public Menu()
         {
-            // Create a new list (you can change int to string, double, etc.)
-            myList = new DoublyLinkedList<int>();
+            // Create a new list (you can change string to int, double, etc.)
+            myList = new DoublyLinkedList<string>();
         }
 
         // Main menu method
@@ -21,23 +21,23 @@ namespace Taller5ListasLigadas.UI
 
             while (option != 10)
             {
-                Console.WriteLine("\n========== DOUBLY LINKED LIST MENU ==========");
-                Console.WriteLine("1. Add element");
-                Console.WriteLine("2. Show forward");
-                Console.WriteLine("3. Show backward");
-                Console.WriteLine("4. Sort descending");
-                Console.WriteLine("5. Show mode(s)");
-                Console.WriteLine("6. Show graph");
-                Console.WriteLine("7. Check if element exists");
-                Console.WriteLine("8. Delete first occurrence");
-                Console.WriteLine("9. Delete all occurrences");
-                Console.WriteLine("10. Exit");
-                Console.Write("\nChoose an option: ");
+                Console.WriteLine("\n========== MENU - LISTA DOBLEMENTE LIGADA ==========");
+                Console.WriteLine("1. Adicionar");
+                Console.WriteLine("2. Mostrar hacia adelante");
+                Console.WriteLine("3. Mostrar hacia atrás");
+                Console.WriteLine("4. Ordenar decentemente");
+                Console.WriteLine("5. Mostrar la(s) moda(s)");
+                Console.WriteLine("6. Mostrar gráfico");
+                Console.WriteLine("7. Existe");
+                Console.WriteLine("8. Eliminar una ocurrencia");
+                Console.WriteLine("9. Eliminar todas las ocurrencia");
+                Console.WriteLine("10. Salir");
+                Console.Write("\nElige una opción: ");
 
                 // Validate input
                 if (!int.TryParse(Console.ReadLine(), out option))
                 {
-                    Console.WriteLine("Invalid input!");
+                    Console.WriteLine("¡Datos Incorrectos!");
                     continue;
                 }
 
@@ -81,11 +81,11 @@ namespace Taller5ListasLigadas.UI
                         break;
 
                     case 10:
-                        Console.WriteLine("Bye!");
+                        Console.WriteLine("¡Adiós!");
                         break;
 
                     default:
-                        Console.WriteLine("Invalid option!");
+                        Console.WriteLine("¡Opción inválida!");
                         break;
                 }
             }
@@ -94,53 +94,53 @@ namespace Taller5ListasLigadas.UI
         // Helper method to add an element
         private void AddElement()
         {
-            Console.Write("Enter element to add: ");
+            Console.Write("Ingresa el número a adicionar: ");
             if (int.TryParse(Console.ReadLine(), out int value))
             {
                 myList.Add(value);
-                Console.WriteLine("Element added!");
+                Console.WriteLine("¡Número adicionado!");
             }
             else
-                Console.WriteLine("Invalid input!");
+                Console.WriteLine("¡Datos Incorrectos!");
         }
 
         // Helper method to check if element exists
         private void CheckIfExists()
         {
-            Console.Write("Enter element to search: ");
+            Console.Write("Ingresa el número a buscar: ");
             if (int.TryParse(Console.ReadLine(), out int searchValue))
             {
                 if (myList.Exists(searchValue))
-                    Console.WriteLine("Element EXISTS!");
+                    Console.WriteLine("¡El número EXISTE!");
                 else
-                    Console.WriteLine("Element DOES NOT exist!");
+                    Console.WriteLine("¡El número NO existe!");
             }
             else
-                Console.WriteLine("Invalid input!");
+                Console.WriteLine("¡Datos Incorrectos!");
         }
 
         // Helper method to delete first occurrence
         private void DeleteFirstOccurrence()
         {
-            Console.Write("Enter element to delete: ");
+            Console.Write("Ingresa el número a eliminar: ");
             if (int.TryParse(Console.ReadLine(), out int delValue))
             {
                 myList.DeleteFirstOccurrence(delValue);
             }
             else
-                Console.WriteLine("Invalid input!");
+                Console.WriteLine("¡Datos Incorrectos!");
         }
 
         // Helper method to delete all occurrences
         private void DeleteAllOccurrences()
         {
-            Console.Write("Enter element to delete all occurrences: ");
+            Console.Write("Ingresa el número a eliminar todas las ocurrencias: ");
             if (int.TryParse(Console.ReadLine(), out int delAllValue))
             {
                 myList.DeleteAllOccurrences(delAllValue);
             }
             else
-                Console.WriteLine("Invalid input!");
+                Console.WriteLine("¡Datos Incorrectos!");
         }
     }
 }

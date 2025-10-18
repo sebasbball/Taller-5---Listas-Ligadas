@@ -65,11 +65,11 @@ namespace Taller5ListasLigadas.Models
         {
             if (head == null)
             {
-                Console.WriteLine("List is empty!");
+                Console.WriteLine("¡La lista está vacía!");
                 return;
             }
 
-            Console.Write("Forward: ");
+            Console.Write("Adelante: ");
             Node<T> current = head;
             while (current != null)
             {
@@ -84,11 +84,11 @@ namespace Taller5ListasLigadas.Models
         {
             if (tail == null)
             {
-                Console.WriteLine("List is empty!");
+                Console.WriteLine("¡La lista está vacía!");
                 return;
             }
 
-            Console.Write("Backward: ");
+            Console.Write("Atrás: ");
             Node<T> current = tail;
             while (current != null)
             {
@@ -103,7 +103,7 @@ namespace Taller5ListasLigadas.Models
         {
             if (head == null)
             {
-                Console.WriteLine("List is empty!");
+                Console.WriteLine("¡La lista está vacía!");
                 return;
             }
 
@@ -137,7 +137,7 @@ namespace Taller5ListasLigadas.Models
                 }
             }
 
-            Console.WriteLine("List sorted in descending order!");
+            Console.WriteLine("¡Lista ordenada en orden descendente!");
         }
 
         // Find mode(s) - the most repeated element(s)
@@ -145,7 +145,7 @@ namespace Taller5ListasLigadas.Models
         {
             if (head == null)
             {
-                Console.WriteLine("List is empty!");
+                Console.WriteLine("¡La lista está vacía!");
                 return;
             }
 
@@ -180,7 +180,7 @@ namespace Taller5ListasLigadas.Models
         {
             if (head == null)
             {
-                Console.WriteLine("List is empty!");
+                Console.WriteLine("¡La lista está vacía!");
                 return;
             }
 
@@ -197,7 +197,7 @@ namespace Taller5ListasLigadas.Models
                 current = current.Next;
             }
 
-            Console.WriteLine("\nGraph of Occurrences:");
+            Console.WriteLine("\nGráfico de ocurrencias:");
             foreach (var item in frequency)
             {
                 Console.Write(item.Key + "  ");
@@ -229,7 +229,7 @@ namespace Taller5ListasLigadas.Models
         {
             if (head == null)
             {
-                Console.WriteLine("List is empty!");
+                Console.WriteLine("¡La lista está vacía!");
                 return;
             }
 
@@ -259,14 +259,14 @@ namespace Taller5ListasLigadas.Models
                         current.Next.Prev = current.Prev;
                     }
 
-                    Console.WriteLine("First occurrence of " + data + " deleted!");
+                    Console.WriteLine("Primera aparición de " + data + " eliminado!");
                     return;
                 }
 
                 current = current.Next;
             }
 
-            Console.WriteLine("Element not found!");
+            Console.WriteLine("¡Elemento no encontrado!!");
         }
 
         // Delete all occurrences
@@ -274,7 +274,7 @@ namespace Taller5ListasLigadas.Models
         {
             if (head == null)
             {
-                Console.WriteLine("List is empty!");
+                Console.WriteLine("¡La lista está vacía!");
                 return;
             }
 
@@ -318,9 +318,9 @@ namespace Taller5ListasLigadas.Models
             }
 
             if (count > 0)
-                Console.WriteLine(count + " occurrence(s) of " + data + " deleted!");
+                Console.WriteLine(count + "¡Ocurrencia(s) de " + data + " eliminado!");
             else
-                Console.WriteLine("Element not found!");
+                Console.WriteLine("¡Elemento no encontrado!");
         }
     }
 }

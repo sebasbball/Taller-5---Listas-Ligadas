@@ -25,7 +25,7 @@ namespace Taller5ListasLigadas.UI
                 Console.WriteLine("1. Adicionar");
                 Console.WriteLine("2. Mostrar hacia adelante");
                 Console.WriteLine("3. Mostrar hacia atrás");
-                Console.WriteLine("4. Ordenar decentemente");
+                Console.WriteLine("4. Ordenar descendentemente");
                 Console.WriteLine("5. Mostrar la(s) moda(s)");
                 Console.WriteLine("6. Mostrar gráfico");
                 Console.WriteLine("7. Existe");
@@ -94,11 +94,12 @@ namespace Taller5ListasLigadas.UI
         // Helper method to add an element
         private void AddElement()
         {
-            Console.Write("Ingresa el número a adicionar: ");
-            if (int.TryParse(Console.ReadLine(), out int value))
+            Console.Write("Ingresa el elemento a adicionar: ");
+            string value = Console.ReadLine();
+            if (!string.IsNullOrWhiteSpace(value))
             {
                 myList.Add(value);
-                Console.WriteLine("¡Número adicionado!");
+                Console.WriteLine("¡Elemento adicionado!");
             }
             else
                 Console.WriteLine("¡Datos Incorrectos!");
@@ -107,13 +108,14 @@ namespace Taller5ListasLigadas.UI
         // Helper method to check if element exists
         private void CheckIfExists()
         {
-            Console.Write("Ingresa el número a buscar: ");
-            if (int.TryParse(Console.ReadLine(), out int searchValue))
+            Console.Write("Ingresa el elemento a buscar: ");
+            string searchValue = Console.ReadLine();
+            if (!string.IsNullOrWhiteSpace(searchValue))
             {
                 if (myList.Exists(searchValue))
-                    Console.WriteLine("¡El número EXISTE!");
+                    Console.WriteLine("¡El elemento EXISTE!");
                 else
-                    Console.WriteLine("¡El número NO existe!");
+                    Console.WriteLine("¡El elemento NO existe!");
             }
             else
                 Console.WriteLine("¡Datos Incorrectos!");
@@ -122,8 +124,9 @@ namespace Taller5ListasLigadas.UI
         // Helper method to delete first occurrence
         private void DeleteFirstOccurrence()
         {
-            Console.Write("Ingresa el número a eliminar: ");
-            if (int.TryParse(Console.ReadLine(), out int delValue))
+            Console.Write("Ingresa el elemento a eliminar: ");
+            string delValue = Console.ReadLine();
+            if (!string.IsNullOrWhiteSpace(delValue))
             {
                 myList.DeleteFirstOccurrence(delValue);
             }
@@ -134,8 +137,9 @@ namespace Taller5ListasLigadas.UI
         // Helper method to delete all occurrences
         private void DeleteAllOccurrences()
         {
-            Console.Write("Ingresa el número a eliminar todas las ocurrencias: ");
-            if (int.TryParse(Console.ReadLine(), out int delAllValue))
+            Console.Write("Ingresa el elemento a eliminar todas las ocurrencias: ");
+            string delAllValue = Console.ReadLine();
+            if (!string.IsNullOrWhiteSpace(delAllValue))
             {
                 myList.DeleteAllOccurrences(delAllValue);
             }

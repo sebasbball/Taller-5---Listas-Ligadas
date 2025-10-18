@@ -3,9 +3,9 @@
 namespace Taller5ListasLigadas
 {
     // Main entry point of the application
-    class Program
+    internal class Program
     {
-        static void Main()
+        private static void Main()
         {
             // Create and start the menu
             Menu menu = new Menu();

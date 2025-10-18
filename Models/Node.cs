@@ -1,7 +1,8 @@
 using System;
 
-namespace TuNombreDeProyecto.Models
+namespace Taller5ListasLigadas.Models
 {
+    // Node class for the doubly linked list
     public class Node<T> where T : IComparable<T>
     {
         public T Data;
